@@ -173,9 +173,11 @@
                     <div class="axis-label">Twist</div>
                     <div class="axis-controls">
                         <button class="play-btn" id="twist-play">▶</button>
-                        <input type="range" min="0" max="100" value="0" class="axis-slider" id="twist-slider">
+                        <div class="custom-slider axis-custom-slider" id="twist-slider-container">
+                            <div class="slider-track"></div>
+                            <div class="slider-thumb" id="twist-slider-thumb">0</div>
+                        </div>
                     </div>
-                    <div class="axis-range"><span id="twist-value">0</span></div>
                 </div>
 
                 <div class="axis-card">
@@ -185,9 +187,11 @@
                     <div class="axis-label">Radius</div>
                     <div class="axis-controls">
                         <button class="play-btn" id="radius-play">▶</button>
-                        <input type="range" min="0" max="100" value="0" class="axis-slider" id="radius-slider">
+                        <div class="custom-slider axis-custom-slider" id="radius-slider-container">
+                            <div class="slider-track"></div>
+                            <div class="slider-thumb" id="radius-slider-thumb">0</div>
+                        </div>
                     </div>
-                    <div class="axis-range"><span id="radius-value">0</span></div>
                 </div>
 
                 <div class="axis-card">
@@ -197,9 +201,11 @@
                     <div class="axis-label">Weight</div>
                     <div class="axis-controls">
                         <button class="play-btn" id="weight-play">▶</button>
-                        <input type="range" min="0" max="100" value="0" class="axis-slider" id="weight-slider">
+                        <div class="custom-slider axis-custom-slider" id="weight-slider-container">
+                            <div class="slider-track"></div>
+                            <div class="slider-thumb" id="weight-slider-thumb">0</div>
+                        </div>
                     </div>
-                    <div class="axis-range"><span id="weight-value">0</span></div>
                 </div>
 
                 <div class="axis-card">
@@ -209,9 +215,11 @@
                     <div class="axis-label">Amplitude</div>
                     <div class="axis-controls">
                         <button class="play-btn" id="amplitude-play">▶</button>
-                        <input type="range" min="0" max="100" value="0" class="axis-slider" id="amplitude-slider">
+                        <div class="custom-slider axis-custom-slider" id="amplitude-slider-container">
+                            <div class="slider-track"></div>
+                            <div class="slider-thumb" id="amplitude-slider-thumb">0</div>
+                        </div>
                     </div>
-                    <div class="axis-range"><span id="amplitude-value">0</span></div>
                 </div>
             </div>
         </div>
@@ -382,7 +390,7 @@
             <div class="try-it-container">
                 <!-- Left side: Canvas/Text display -->
                 <div class="canvas-container">
-                    <div class="canvas-text" id="canvas-text" contenteditable="true" spellcheck="false">qwer</div>
+                    <div class="canvas-text" id="canvas-text" contenteditable="true" spellcheck="false">qkeo t<br>akskkc<br>zezet<br> zkxc</div>
                 </div>
 
                 <!-- Right side: Controls -->
@@ -454,52 +462,64 @@
                     <div class="design-panel">
 
                         <!-- Text Size slider -->
-                        <div class="control-section">
+                        <div class="control-section" id="control-section-text-size">
                             <div class="control-section-title">Design</div>
                             <label class="axis-slider-label">Text Size</label>
-                            <input type="range" min="40" max="300" value="120" class="control-slider"
-                                id="text-size-slider">
+                            <div class="custom-slider" id="text-size-slider-container">
+                                <div class="slider-track"></div>
+                                <div class="slider-thumb" id="text-size-thumb">113</div>
+                            </div>
                         </div>
 
                         <!-- Color controls -->
                         <div class="control-section">
                             <div class="color-section">
                                 <div class="color-toggle">
-                                    <button class="color-toggle-btn active" data-mode="foreground">Foreground</button>
-                                    <button class="color-toggle-btn" data-mode="background">Background</button>
+                                    <button class="color-toggle-btn active" data-mode="foreground" id="foreground-btn">
+                                        Foreground
+                                        <input type="color" id="foreground-color" class="hidden-color-picker"
+                                            value="#4B2234">
+                                    </button>
+                                    <button class="color-toggle-btn" data-mode="background" id="background-btn">
+                                        Background
+                                        <input type="color" id="background-color" class="hidden-color-picker"
+                                            value="#F6F6EA">
+                                    </button>
                                 </div>
-                                <div class="color-picker-wrapper">
-                                    <input type="color" id="foreground-color" class="color-picker" value="#4B2234">
-                                    <input type="color" id="background-color" class="color-picker" value="#F6F6EA"
-                                        style="display: none;">
-                                </div>
-                                <div class="hex-display" id="hex-display">#4B2234</div>
                             </div>
                         </div>
 
                         <!-- Variable Axis controls -->
                         <div class="control-section">
-                            <div class="control-section-title">Variable Axis</div>
                             <div class="axis-slider-group">
+                                <div class="control-section-title">Variable Axis</div>
                                 <div class="axis-slider-item">
                                     <label class="axis-slider-label">Twist</label>
-                                    <input type="range" min="0" max="100" value="0" class="axis-slider"
-                                        id="try-twist-slider">
+                                    <div class="custom-slider" id="try-twist-slider-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-thumb" id="try-twist-thumb">0</div>
+                                    </div>
                                 </div>
                                 <div class="axis-slider-item">
                                     <label class="axis-slider-label">Radius</label>
-                                    <input type="range" min="0" max="100" value="100" class="axis-slider"
-                                        id="try-radius-slider">
+                                    <div class="custom-slider" id="try-radius-slider-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-thumb" id="try-radius-thumb">100</div>
+                                    </div>
                                 </div>
                                 <div class="axis-slider-item">
                                     <label class="axis-slider-label">Weight</label>
-                                    <input type="range" min="0" max="100" value="50" class="axis-slider"
-                                        id="try-weight-slider">
+                                    <div class="custom-slider" id="try-weight-slider-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-thumb" id="try-weight-thumb">50</div>
+                                    </div>
                                 </div>
                                 <div class="axis-slider-item">
                                     <label class="axis-slider-label">Amplitude</label>
-                                    <input type="range" min="0" max="100" value="0" class="axis-slider"
-                                        id="try-amplitude-slider">
+                                    <div class="custom-slider" id="try-amplitude-slider-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-thumb" id="try-amplitude-thumb">0</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -835,66 +855,154 @@
             setInterval(spinSlots, 3000);
         });
 
-        // Variable font axis controls with play/pause
+
+
+        // Global Custom Slider Class (used by both sections)
+        class CustomSlider {
+            constructor(containerId, thumbId, min, max, initialValue, onChange) {
+                this.container = document.getElementById(containerId);
+                this.thumb = document.getElementById(thumbId);
+                this.min = min;
+                this.max = max;
+                this.value = initialValue;
+                this.onChange = onChange;
+                this.isDragging = false;
+
+                this.init();
+            }
+
+            init() {
+                this.updateThumbPosition();
+
+                this.thumb.addEventListener('mousedown', (e) => this.startDrag(e));
+                document.addEventListener('mousemove', (e) => this.drag(e));
+                document.addEventListener('mouseup', () => this.stopDrag());
+
+                this.thumb.addEventListener('touchstart', (e) => this.startDrag(e.touches[0]));
+                document.addEventListener('touchmove', (e) => this.drag(e.touches[0]));
+                document.addEventListener('touchend', () => this.stopDrag());
+
+                this.container.addEventListener('click', (e) => {
+                    if (e.target !== this.thumb) {
+                        this.handleTrackClick(e);
+                    }
+                });
+            }
+
+            startDrag(e) {
+                this.isDragging = true;
+                e.preventDefault();
+            }
+
+            drag(e) {
+                if (!this.isDragging) return;
+
+                const rect = this.container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percent = Math.max(0, Math.min(1, x / rect.width));
+
+                this.value = this.min + percent * (this.max - this.min);
+                this.updateThumbPosition();
+                this.onChange(this.value);
+            }
+
+            stopDrag() {
+                this.isDragging = false;
+            }
+
+            handleTrackClick(e) {
+                const rect = this.container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percent = Math.max(0, Math.min(1, x / rect.width));
+
+                this.value = this.min + percent * (this.max - this.min);
+                this.updateThumbPosition();
+                this.onChange(this.value);
+            }
+
+            updateThumbPosition() {
+                const percent = (this.value - this.min) / (this.max - this.min);
+                const thumbPosition = percent * (this.container.offsetWidth - 20);
+                this.thumb.style.left = `${thumbPosition}px`;
+                this.thumb.textContent = Math.round(this.value);
+            }
+
+            setValue(value) {
+                this.value = value;
+                this.updateThumbPosition();
+            }
+        }
+
+        // Variable font axis controls with play/pause and custom sliders
         document.addEventListener('DOMContentLoaded', () => {
+
             const axes = [
                 {
                     name: 'twist',
-                    slider: document.getElementById('twist-slider'),
+                    slider: null,
                     text: document.getElementById('twist-text'),
-                    value: document.getElementById('twist-value'),
                     playBtn: document.getElementById('twist-play'),
                     updateFn: (val) => `"TWST" ${val}, "RDUS" 100, "wght" 50, "AMPT" 0`,
                     isPlaying: false,
                     direction: 1,
-                    currentValue: 0  // Matches value="0" in HTML
+                    currentValue: 0
                 },
                 {
                     name: 'radius',
-                    slider: document.getElementById('radius-slider'),
+                    slider: null,
                     text: document.getElementById('radius-text'),
-                    value: document.getElementById('radius-value'),
                     playBtn: document.getElementById('radius-play'),
                     updateFn: (val) => `"TWST" 0, "RDUS" ${val}, "wght" 50, "AMPT" 0`,
                     isPlaying: false,
                     direction: 1,
-                    currentValue: 0  // Matches value="0" in HTML
+                    currentValue: 0
                 },
                 {
                     name: 'weight',
-                    slider: document.getElementById('weight-slider'),
+                    slider: null,
                     text: document.getElementById('weight-text'),
-                    value: document.getElementById('weight-value'),
                     playBtn: document.getElementById('weight-play'),
                     updateFn: (val) => `"TWST" 0, "RDUS" 100, "wght" ${val}, "AMPT" 0`,
                     isPlaying: false,
                     direction: 1,
-                    currentValue: 0  // Matches value="0" in HTML
+                    currentValue: 0
                 },
                 {
                     name: 'amplitude',
-                    slider: document.getElementById('amplitude-slider'),
+                    slider: null,
                     text: document.getElementById('amplitude-text'),
-                    value: document.getElementById('amplitude-value'),
                     playBtn: document.getElementById('amplitude-play'),
                     updateFn: (val) => `"TWST" 0, "RDUS" 100, "wght" 0, "AMPT" ${val}`,
                     isPlaying: false,
                     direction: 1,
-                    currentValue: 0  // Matches value="0" in HTML
+                    currentValue: 0
                 }
             ];
+
+            // Initialize custom sliders for each axis
+            axes.forEach(axis => {
+                axis.slider = new CustomSlider(
+                    `${axis.name}-slider-container`,
+                    `${axis.name}-slider-thumb`,
+                    0,
+                    100,
+                    0,
+                    (value) => {
+                        axis.currentValue = value;
+                        axis.text.style.fontVariationSettings = axis.updateFn(value);
+                    }
+                );
+            });
 
             function animateLoop() {
                 axes.forEach(axis => {
                     if (!axis.isPlaying) return;
 
-                    // Add easing factor
                     const distanceFromEdge = axis.direction === 1 ? (100 - axis.currentValue) : axis.currentValue;
-                    const easeFactor = Math.max(0.7, Math.min(1, distanceFromEdge / 20)); // Slow down near edges
+                    const easeFactor = Math.max(0.7, Math.min(1, distanceFromEdge / 20));
 
                     axis.currentValue += axis.direction * 1 * easeFactor;
 
-                    // Bounce at ends
                     if (axis.currentValue >= 100) {
                         axis.currentValue = 100;
                         axis.direction = -1;
@@ -903,8 +1011,7 @@
                         axis.direction = 1;
                     }
 
-                    axis.slider.value = axis.currentValue;
-                    axis.value.textContent = Math.round(axis.currentValue);
+                    axis.slider.setValue(axis.currentValue);
                     axis.text.style.fontVariationSettings = axis.updateFn(axis.currentValue);
                 });
 
@@ -924,7 +1031,6 @@
             }
 
             axes.forEach(axis => {
-                // Play/pause button
                 axis.playBtn.addEventListener('click', () => {
                     if (axis.isPlaying) {
                         stopAnimation(axis);
@@ -933,112 +1039,154 @@
                     }
                 });
 
-                // Slider input - pause on interaction
-                axis.slider.addEventListener('mousedown', () => {
+                axis.slider.thumb.addEventListener('mousedown', () => {
                     stopAnimation(axis);
                 });
 
-                axis.slider.addEventListener('input', (e) => {
-                    const value = parseFloat(e.target.value);
-                    axis.currentValue = value;
-                    axis.value.textContent = Math.round(value);
-                    axis.text.style.fontVariationSettings = axis.updateFn(value);
+                axis.slider.thumb.addEventListener('touchstart', () => {
+                    stopAnimation(axis);
                 });
 
-                // Initialize
                 axis.text.style.fontVariationSettings = axis.updateFn(axis.currentValue);
                 startAnimation(axis);
             });
 
-            // Start the animation loop
             animateLoop();
         });
 
-
-        // Try It Yourself - Interactive Canvas
+        // Try It Yourself - Interactive Canvas with Custom Sliders
         document.addEventListener('DOMContentLoaded', () => {
             const canvasText = document.getElementById('canvas-text');
             const canvasContainer = document.querySelector('.canvas-container');
-            const textSizeSlider = document.getElementById('text-size-slider');
-            const twistSlider = document.getElementById('try-twist-slider');
-            const radiusSlider = document.getElementById('try-radius-slider');
-            const weightSlider = document.getElementById('try-weight-slider');
-            const amplitudeSlider = document.getElementById('try-amplitude-slider');
             const foregroundColorPicker = document.getElementById('foreground-color');
             const backgroundColorPicker = document.getElementById('background-color');
-            const hexDisplay = document.getElementById('hex-display');
             const colorToggleBtns = document.querySelectorAll('.color-toggle-btn');
 
             let currentColorMode = 'foreground';
             let twist = 0, radius = 100, weight = 50, amplitude = 0;
+            let textSize = 113;
 
-            // Update font variation settings
+            // Function to determine if color is light or dark
+            function getTextColor(hexColor) {
+                const r = parseInt(hexColor.substr(1, 2), 16);
+                const g = parseInt(hexColor.substr(3, 2), 16);
+                const b = parseInt(hexColor.substr(5, 2), 16);
+                const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                return brightness > 128 ? '#4B2234' : '#F6F6EA';
+            }
+
             function updateFontVariation() {
                 canvasText.style.fontVariationSettings = `"TWST" ${twist}, "RDUS" ${radius}, "wght" ${weight}, "AMPT" ${amplitude}`;
             }
 
-            // Text size control (1:1 with line-height)
-            textSizeSlider.addEventListener('input', (e) => {
-                const size = e.target.value;
-                canvasText.style.fontSize = `${size}px`;
-                canvasText.style.lineHeight = '1';
-            });
+            // Initialize all sliders using the global CustomSlider class
+            const textSizeSlider = new CustomSlider(
+                'text-size-slider-container',
+                'text-size-thumb',
+                40,
+                300,
+                113,
+                (value) => {
+                    textSize = value;
+                    canvasText.style.fontSize = `${value}px`;
+                    canvasText.style.lineHeight = '1';
+                }
+            );
 
-            // Variable axis controls
-            twistSlider.addEventListener('input', (e) => {
-                twist = parseFloat(e.target.value);
-                updateFontVariation();
-            });
+            const twistSlider = new CustomSlider(
+                'try-twist-slider-container',
+                'try-twist-thumb',
+                0,
+                100,
+                0,
+                (value) => {
+                    twist = value;
+                    updateFontVariation();
+                }
+            );
 
-            radiusSlider.addEventListener('input', (e) => {
-                radius = parseFloat(e.target.value);
-                updateFontVariation();
-            });
+            const radiusSlider = new CustomSlider(
+                'try-radius-slider-container',
+                'try-radius-thumb',
+                0,
+                100,
+                100,
+                (value) => {
+                    radius = value;
+                    updateFontVariation();
+                }
+            );
 
-            weightSlider.addEventListener('input', (e) => {
-                weight = parseFloat(e.target.value);
-                updateFontVariation();
-            });
+            const weightSlider = new CustomSlider(
+                'try-weight-slider-container',
+                'try-weight-thumb',
+                0,
+                100,
+                50,
+                (value) => {
+                    weight = value;
+                    updateFontVariation();
+                }
+            );
 
-            amplitudeSlider.addEventListener('input', (e) => {
-                amplitude = parseFloat(e.target.value);
-                updateFontVariation();
-            });
+            const amplitudeSlider = new CustomSlider(
+                'try-amplitude-slider-container',
+                'try-amplitude-thumb',
+                0,
+                100,
+                0,
+                (value) => {
+                    amplitude = value;
+                    updateFontVariation();
+                }
+            );
 
-            // Color mode toggle
-            colorToggleBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    colorToggleBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentColorMode = btn.dataset.mode;
+            // Color controls
+            const foregroundBtn = document.getElementById('foreground-btn');
+            const backgroundBtn = document.getElementById('background-btn');
 
-                    if (currentColorMode === 'foreground') {
-                        foregroundColorPicker.style.display = 'block';
-                        backgroundColorPicker.style.display = 'none';
-                        hexDisplay.textContent = foregroundColorPicker.value.toUpperCase();
-                    } else {
-                        foregroundColorPicker.style.display = 'none';
-                        backgroundColorPicker.style.display = 'block';
-                        hexDisplay.textContent = backgroundColorPicker.value.toUpperCase();
-                    }
-                });
-            });
+            // Set initial button background colors and text colors
+            foregroundBtn.style.background = foregroundColorPicker.value;
+            foregroundBtn.style.color = getTextColor(foregroundColorPicker.value);
+            backgroundBtn.style.background = backgroundColorPicker.value;
+            backgroundBtn.style.color = getTextColor(backgroundColorPicker.value);
 
             // Foreground color picker
             foregroundColorPicker.addEventListener('input', (e) => {
                 canvasText.style.color = e.target.value;
-                hexDisplay.textContent = e.target.value.toUpperCase();
+                foregroundBtn.style.background = e.target.value;
+                foregroundBtn.style.color = getTextColor(e.target.value);
+            });
+
+            foregroundColorPicker.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            foregroundBtn.addEventListener('click', () => {
+                colorToggleBtns.forEach(b => b.classList.remove('active'));
+                foregroundBtn.classList.add('active');
             });
 
             // Background color picker
             backgroundColorPicker.addEventListener('input', (e) => {
                 canvasContainer.style.background = e.target.value;
-                hexDisplay.textContent = e.target.value.toUpperCase();
+                backgroundBtn.style.background = e.target.value;
+                backgroundBtn.style.color = getTextColor(e.target.value);
             });
 
-            // Initialize
+            backgroundColorPicker.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            backgroundBtn.addEventListener('click', () => {
+                colorToggleBtns.forEach(b => b.classList.remove('active'));
+                backgroundBtn.classList.add('active');
+            });
+            
+
             updateFontVariation();
         });
+
 
     </script>
 
