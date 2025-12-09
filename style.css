@@ -591,6 +591,12 @@ video {
     padding: 100px 0;
 }
 
+#fullposter-2 {
+    width: 100%;
+    height: auto;
+    padding:0;
+}
+
 /* FOOTER */
 .footer {
     text-align: center;

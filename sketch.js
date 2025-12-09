@@ -141,46 +141,47 @@ function drawModeIndicator() {
     noStroke();
     textAlign(LEFT, TOP);
     textSize(14);
-    textFont('Arial');
+    textFont('Arial Narrow');
     
-    let y = 20;
+    let y = 30;
+    let x = width - 160;
     let lineHeight = 20;
     
     // MODE section with highlighting
     fill(0, 0, 0);
-    text('MODE:', 20, y);
+    text('MODE:', x, y);
     y += lineHeight;
     
     // Highlight current mode in oxblood
     if (activeModuleSet === 'A') fill(75, 34, 52);
     else fill(0, 0, 0);
-    text('1 — Round', 20, y);
+    text('1 — Round', x, y);
     y += lineHeight;
     
     if (activeModuleSet === 'B') fill(75, 34, 52);
     else fill(0, 0, 0);
-    text('2 — Round Twist', 20, y);
+    text('2 — Round Twist', x, y);
     y += lineHeight;
     
     if (activeModuleSet === 'C') fill(75, 34, 52);
     else fill(0, 0, 0);
-    text('3 — Sharp', 20, y);
+    text('3 — Sharp', x, y);
     y += lineHeight;
     
     if (activeModuleSet === 'D') fill(75, 34, 52);
     else fill(0, 0, 0);
-    text('4 — Sharp Twist', 20, y);
+    text('4 — Sharp Twist', x, y);
     y += lineHeight + 10;
     
     // Controls section
     fill(0, 0, 0);
-    text('Draw — Drag', 20, y);
+    text('Draw — Drag', x, y);
     y += lineHeight;
-    text('Erase — Hold option + Drag', 20, y);
+    text('Erase — Option + Drag', x, y);
     y += lineHeight;
-    text('G — Show Grid', 20, y);
+    text('G — Show Grid', x, y);
     y += lineHeight;
-    text('C — Clear', 20, y);
+    text('C — Clear', x, y);
 }
 
 function keyPressed() {
