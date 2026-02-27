@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M87.01,0h-4v12.99h-6V0h-4v12.99h-6V0h-4v12.99h-6V0h-4v12.99h-6V0h-4v12.99h-6V0h-4v12.99h-6V0h-4v12.99h-6V0h-4v16.99h9.99v9.99h9.99v9.99h9.99v9.99h9.99v9.99h9.99v9.99h9.99v9.99h9.99v9.99h16.99v-4h-12.99v-6h12.99v-4h-12.99v-6h12.99v-4h-12.99v-6h12.99v-4h-12.99v-6h12.99v-4h-12.99v-6h12.99v-4h-12.99v-6h12.99v-4h-12.99v-6h12.99v-4h-12.99V0ZM73.02,16.99v6h-6v-6h6ZM67.03,42.97v-6h6v6h-6ZM73.02,46.96v6h-6v-6h6ZM57.03,26.98h6v6h-6v-6ZM53.04,32.97h-6v-6h6v6ZM63.03,36.97v6h-6v-6h6ZM67.03,32.97v-6h6v6h-6ZM63.03,16.99v6h-6v-6h6ZM53.04,16.99v6h-6v-6h6ZM43.04,16.99v6h-6v-6h6ZM27.06,22.98v-6h6v6h-6ZM37.05,32.97v-6h6v6h-6ZM47.04,42.97v-6h6v6h-6ZM57.03,52.96v-6h6v6h-6ZM67.03,62.95v-6h6v6h-6ZM83.01,72.94h-6v-6h6v6ZM83.01,62.95h-6v-6h6v6ZM83.01,52.96h-6v-6h6v6ZM83.01,42.97h-6v-6h6v6ZM83.01,32.97h-6v-6h6v6ZM83.01,22.98h-6v-6h6v6Z"/>
+</svg>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0 {
         fill: #010101;
       }
     </style>
   </defs>
-  <path class="cls-1" d="M82.97,22.98h-6V0h-4v22.98h-6V0h-4v22.98h-6V0h-4v22.98h-6V0h-4v26.98h9.99v6h-15.99V0h-4v36.97h19.98v6h-25.98V0h-4v46.96h29.98v6H17.03V0h-4v56.96h43.97v-9.99h9.99v-9.99h9.99v-9.99h9.99V0h-4v22.98ZM56.99,26.98h6v6h-6v-6ZM62.99,42.97h-6v-6h6v6ZM72.98,32.97h-6v-6h6v6Z"/>
+  <path class="st0" d="M57,87.1v-10h10v-10h10v-10h10V0h-4v53.1h-6V0h-4v53.1h-6V0h-4v53.1h-6V0h-4v53.1h-6V0h-4v57.1h10v6h-16V0h-4v67.1h20v6h-26V0h-4v77.1h30v6H17V0h-4v87.1h44,0ZM73,57.1v6h-6v-6h6ZM57,57.1h6v6h-6v-6ZM57,67.1h6v6h-6v-6Z"/>
 </svg>

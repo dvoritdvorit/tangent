@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0 {
         fill: #010101;
       }
     </style>
   </defs>
-  <path class="cls-1" d="M56.96,43.01h-9.99v-9.99h-9.99v-9.99h-9.99v-9.99H0v4h22.98v6H0v4h22.98v6H0v4h22.98v6H0v4h22.98v6H0v4h26.98v-9.99h6v15.99H0v4h36.97v-19.98h6v25.98H0v4h46.96v-29.98h6v35.97H0v4h56.96v-43.97ZM26.98,27.02h6v6h-6v-6ZM26.98,43.01v-6h6v6h-6ZM36.97,43.01v-6h6v6h-6Z"/>
+  <path class="st0" d="M87.1,43h-10s0-10,0-10h-10s0-10,0-10h-10s0-10,0-10H0s0,4,0,4h53.1s0,6,0,6H0s0,4,0,4h53.1s0,6,0,6H0s0,4,0,4h53.1s0,6,0,6H0s0,4,0,4h53.1s0,6,0,6H0s0,4,0,4h57.1s0-10,0-10h6s0,16,0,16H0s0,4,0,4h67.1s0-20,0-20h6s0,26,0,26H0s0,4,0,4h77.1s0-30,0-30h6s0,35.9,0,35.9H0s0,4,0,4h87.1s0-44,0-44h0ZM57.1,27h6s0,6,0,6h-6s0-6,0-6ZM57.1,43v-6s6,0,6,0v6s-6,0-6,0ZM67.1,43v-6s6,0,6,0v6s-6,0-6,0Z"/>
 </svg>

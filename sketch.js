@@ -39,7 +39,7 @@ function setup() {
 }
 
 function draw() {
-    background(246, 246, 234); // linen
+    background (255);
     
     // Check if Option/Alt key is held (for erase)
     eraseMode = keyIsDown(ALT);
@@ -76,7 +76,7 @@ function unsetTile() {
 }
 
 function drawGrid() {
-    stroke(0, 0, 0, 50);
+    stroke(0, 0, 0, 25);
     strokeWeight(0.5);
     noFill();
     rectMode(CENTER);
@@ -144,7 +144,7 @@ function drawModeIndicator() {
     textFont('Arial Narrow');
     
     let y = 30;
-    let x = width - 160;
+    let x = 50;
     let lineHeight = 20;
     
     // MODE section with highlighting
